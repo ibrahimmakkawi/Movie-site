@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="BobFlix is a popular movie app made by
+    ibrahimmakkawi"
+    />
+
+    <link rel="shortcut icon" href="Netflix-Logo.wine.svg" type="svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!--  HEAD -->
+
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img
+          src="Netflix-Logo.wine.svg"
+          width="140"
+          height="32"
+          alt="BobFlix Home"
+        />
+      </a>
+      <div class="search-box" search-box>
+        <div class="search-wrapper" searhch-wrapper>
+          <input
+            type="text"
+            name="seacrh"
+            aria-label="search movies"
+            placeholder="Search any movies..."
+            class="seacrh-field"
+            search-field
+            autocomplete="off"
+          />
+          <img
+            class="leading-icon"
+            src="search-13-512.png"
+            width="24"
+            height="24"
+            class="leading-icon"
+            alt="seacrh"
+          />
+        </div>
+        <button class="search-btn" search-toggler>
+          <img
+            src="x-mark-512.png"
+            width="24"
+            height="24"
+            alt="close search box"
+          />
+        </button>
+      </div>
+      <button class="search-btn" search-toggler menu-close>
+        <img
+          src="search-13-512.png"
+          width="24"
+          height="24"
+          alt="open search box"
+        />
+      </button>
+      <button class="menu-btn" menu-btn menu-toggler>
+        <img
+          src="m2i8G6G6b1m2A0G6.png"
+          width="24"
+          height="24"
+          class="menu"
+          alt="open menu"
+        />
+        <img
+          src="m2i8G6G6b1m2A0G6.png"
+          width="24"
+          height="24"
+          class="close"
+          alt="close menu"
+        />
+      </button>
+    </header>
+
+    <!--  SIDEBAR -->
+    <nav class="sidebar" sidebar>
+      <div class="sidebar-inner">
+        <div class="sidebar-list">
+          <p class="title">Genre</p>
+          <a href="movie-list.html" menu-close class="sidebar-link">Action</a>
+          <a href="movie-list.html" menu-close class="sidebar-link">Horror</a>
+          <a href="movie-list.html" menu-close class="sidebar-link">comedy</a>
+          <a href="movie-list.html" menu-close class="sidebar-link"
+            >Adventure</a
+          >
+          <a href="movie-list.html" menu-close class="sidebar-link">Drama</a>
+          <a href="movie-list.html" menu-close class="sidebar-link">Sci-Fi</a>
+        </div>
+        <div class="sidebar-list">
+          <p class="title">Language</p>
+          <a href="movie-list.html" menu-close class="sidebar-link">English</a>
+          <a href="movie-list.html" menu-close class="sidebar-link">French</a>
+          <a href="movie-list.html" menu-close class="sidebar-link">Arabic</a>
+          <a href="movie-list.html" menu-close class="sidebar-link">Hindi</a>
+          <a href="movie-list.html" menu-close class="sidebar-link">Spanish</a>
+          <a href="movie-list.html" menu-close class="sidebar-link">Turkish</a>
+        </div>
+        <div class="sidebar-footer">
+          <p class="Copyright">Copyright 2024 <a href="">@ibrahimmakkawi</a></p>
+          <img
+            src="imgs/IMDB_Logo_2016.svg.png"
+            width="100"
+            height="10"
+            alt="the movie database logo"
+          />
+        </div>
+      </div>
+    </nav>
+    <div class="overlay" overlay menu-toggler></div>
+
+    <article class="container" page-content>
+      <!-- movies detail -->
+
+      <div class="movie-detail">
+        <div
+          class="backdrop-img"
+          style="
+            background-image: url('imgs/dunki-shah-rukh-khan-215124888-16x9_0.webp');
+          "
+        ></div>
+        <figure class="poster-box movie-poster">
+          <img src="imgs/dunki.jpg" alt="Dunki" class="img-cover" />
+        </figure>
+        <div class="detail-box">
+          <div class="detail-content">
+            <h1 class="heading">Dunki</h1>
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="imgs/clipart3078264.png"
+                  width="20"
+                  height="20"
+                  alt="rating"
+                />
+                <span class="span">7.2</span>
+              </div>
+              <div class="seperator"></div>
+              <div class="meta-item">162m</div>
+              <div class="seperator"></div>
+              <div class="meta-item">2023</div>
+              <div class="meta-item card-badge">PG-13</div>
+            </div>
+            <p class="genre">Drama, Comedy</p>
+            <p class="overview">
+              Four friends from a village in Punjab share a common dream: to go
+              to England. Their problem is that they have neither the visa nor
+              the ticket. A soldier promises to take them to the land of their
+              dreams.
+            </p>
+            <ul class="detail-list">
+              <div class="list-item">
+                <p class="list-name">Cast</p>
+                <p>
+                  Shah Rukh Khan as Hardayal "Hardy" Singh Dhillon, an Ex-Army
+                  Officer of Indian Army Taapsee Pannu as Manu Randhawa Vicky
+                  Kaushal as Sukhi (Special Appearance) Boman Irani as Geetendar
+                  "Geetu" Gulati Vikram Kochhar as Balindar "Buggu" Lakhanpal
+                  Anil Grover as Balli Kakkad Jyoti Subhash as Buggu's
+                  grandmother
+                </p>
+              </div>
+
+              <div class="list-item">
+                <p class="list-name">Directyed By</p>
+                <p>Rajkumar Hirani</p>
+              </div>
+            </ul>
+          </div>
+
+          <div class="title-wrapper">
+            <h3 class="title-large">Trailers and clips</h3>
+          </div>
+          <div class="slider-list">
+            <div class="slider-inner">
+              <div class="video-card"></div>
+              <div class="video-card"></div>
+              <div class="video-card"></div>
+              <div class="video-card"></div>
+              <div class="video-card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  Movie List  -->
+
+      <section class="movie-list" aria-label="upcoming movie">
+        <div class="title-wrapper">
+          <h3 class="tilte-large">You May Also Like</h3>
+        </div>
+
+        <div class="slider-list">
+          <div class="slider-inner">
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img src="imgs/dunki.jpg" class="img-cover" alt="Dunki" />
+              </figure>
+              <h4 class="title">Dunki sharukhan</h4>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="imgs/clipart3078264.png"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    alt="rating"
+                  />
+                  <span class="span">8.4</span>
+                </div>
+                <div class="card-badge">2023</div>
+              </div>
+              <a href="detail.html" class="card-btn" title="Dunki"></a>
+            </div>
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img src="imgs/dunki.jpg" class="img-cover" alt="Dunki" />
+              </figure>
+              <h4 class="title">Dunki sharukhan</h4>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="imgs/clipart3078264.png"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    alt="rating"
+                  />
+                  <span class="span">8.4</span>
+                </div>
+                <div class="card-badge">2023</div>
+              </div>
+              <a href="detail.html" class="card-btn" title="Dunki"></a>
+            </div>
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img src="imgs/dunki.jpg" class="img-cover" alt="Dunki" />
+              </figure>
+              <h4 class="title">Dunki sharukhan</h4>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="imgs/clipart3078264.png"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    alt="rating"
+                  />
+                  <span class="span">8.4</span>
+                </div>
+                <div class="card-badge">2023</div>
+              </div>
+              <a href="detail.html" class="card-btn" title="Dunki"></a>
+            </div>
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img src="imgs/dunki.jpg" class="img-cover" alt="Dunki" />
+              </figure>
+              <h4 class="title">Dunki sharukhan</h4>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="imgs/clipart3078264.png"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    alt="rating"
+                  />
+                  <span class="span">8.4</span>
+                </div>
+                <div class="card-badge">2023</div>
+              </div>
+              <a href="detail.html" class="card-btn" title="Dunki"></a>
+            </div>
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img src="imgs/dunki.jpg" class="img-cover" alt="Dunki" />
+              </figure>
+              <h4 class="title">Dunki sharukhan</h4>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="imgs/clipart3078264.png"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    alt="rating"
+                  />
+                  <span class="span">8.4</span>
+                </div>
+                <div class="card-badge">2023</div>
+              </div>
+              <a href="detail.html" class="card-btn" title="Dunki"></a>
+            </div>
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img src="imgs/dunki.jpg" class="img-cover" alt="Dunki" />
+              </figure>
+              <h4 class="title">Dunki sharukhan</h4>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="imgs/clipart3078264.png"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    alt="rating"
+                  />
+                  <span class="span">8.4</span>
+                </div>
+                <div class="card-badge">2023</div>
+              </div>
+              <a href="detail.html" class="card-btn" title="Dunki"></a>
+            </div>
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img src="imgs/dunki.jpg" class="img-cover" alt="Dunki" />
+              </figure>
+              <h4 class="title">Dunki sharukhan</h4>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="imgs/clipart3078264.png"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    alt="rating"
+                  />
+                  <span class="span">8.4</span>
+                </div>
+                <div class="card-badge">2023</div>
+              </div>
+              <a href="detail.html" class="card-btn" title="Dunki"></a>
+            </div>
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img src="imgs/dunki.jpg" class="img-cover" alt="Dunki" />
+              </figure>
+              <h4 class="title">Dunki sharukhan</h4>
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="imgs/clipart3078264.png"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    alt="rating"
+                  />
+                  <span class="span">8.4</span>
+                </div>
+                <div class="card-badge">2023</div>
+              </div>
+              <a href="detail.html" class="card-btn" title="Dunki"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
