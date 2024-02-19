@@ -10,7 +10,7 @@
   --rating-color: hsla(44, 100%, 49%, 1);
   --surface: hsla(250, 13%, 11%, 1);
   --text-color: hsla(250, 2%, 59%, 1);
-  --white: ■hsla(0, 0%, 100%, 1);
+  --white: #ffffff;
 
   --banner-overlay: 90deg, hsl(220, 17%, 7%) 0%, hsla(220, 17%, 7%, 0.2) 100%;
   --bottom-overlay: 180deg, hsl(250, 13%, 11%, 0), hsla(250, 13%, 11%, 1);
@@ -124,21 +124,39 @@ body {
 
 /* HEADER  */
 
-.search-wrapper::before {
-  position: absolute;
-  top: 14px;
-  right: 14px;
+.search-wrapper::before,
+.load-more::before {
   content: "";
   width: 20px;
   height: 20px;
-  border: 3px solid var(--white);
+  border: 3px solid white;
   border-radius: var(--radius-24);
   border-inline-end-color: transparent;
   animation: loading 500ms linear infinite;
   display: none;
+  z-index: 100;
 }
 
+.search-wrapper::before {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+}
 .search-wrapper.searching::before {
+  display: block;
+}
+
+.load-more {
+  background-color: var(--primary-variant);
+  margin-inline: auto;
+  margin-block: 36px 60px;
+}
+
+.load-more:is(:hover, :focus-visible) {
+  --primary-variant: hsla(350, 67%, 39%, 1);
+}
+
+.load-more.loading::before {
   display: block;
 }
 
@@ -188,7 +206,7 @@ body {
 }
 
 .btn {
-  color: var(--white);
+  color: white;
   font-size: var(--fs-button);
   font-weight: var(--weight-bold);
   max-width: max-content;
@@ -196,14 +214,14 @@ body {
   align-items: center;
   gap: 12px;
   padding-block: 12px;
-  padding-inline: 20px 40px;
+  padding-inline: 18px 20px;
   border-radius: var(--radius-8);
   transition: var(--trans-short);
 }
 
 .card-badge {
   background-color: var(--banner-background);
-  color: var(--white);
+  color: white;
   font-size: var(--fs-label);
   font-weight: var(--weight-bold);
   padding-inline: 6px;
@@ -370,7 +388,7 @@ body {
 
 .sidebar {
   position: absolute;
-  background-color: var(--backgoround);
+  background-color: var(--background);
   top: 96px;
   bottom: 0;
   left: -340px;
@@ -427,6 +445,7 @@ body {
 
 .sidebar-list .title {
   margin-block-end: 8px;
+  color: var(--white);
 }
 
 .sidebar-footer {
@@ -478,7 +497,8 @@ body {
   z-index: 1;
 }
 
-.container::after {
+.container::after,
+.search-modal::after {
   content: "";
   position: fixed;
   bottom: 0;
@@ -599,7 +619,7 @@ body {
   filter: brightness(0.4);
 }
 
-.slider-control .active {
+.slider-control.active {
   filter: brightness(1);
   box-shadow: var(--sahdow-1);
 }
@@ -666,7 +686,7 @@ Detail page
   );
 }
 
-.movie-detail .movie-poste {
+.movie-detail .movie-poster {
   max-width: 300px;
   width: 100%;
 }
@@ -700,18 +720,77 @@ Detail page
 }
 
 .seperator {
-  width: 4px;
-  height: 4px;
+  width: 7px;
+  height: 7px;
   background-color: var(--white-alpha-20);
   border-radius: var(--radius-8);
 }
 
 .video-card {
-  background-image: url(imgs/dunki-shah-rukh-khan-215124888-16x9_0.webp);
+  background-image: url(imgs/film-2-512.png);
   background-position: center;
-  background-size: cover;
+  background-size: 50px 50px;
   aspect-ratio: 16 / 9;
   flex-shrink: 0;
   max-width: 500px;
   width: calc(100% - 40px);
+}
+
+/* -----------------------------------------------
+
+
+MOVIE LIST PAGE 
+
+*/
+
+.genre-list .title-wrapper {
+  margin-block-end: 56px;
+}
+
+.genre-list .grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 16px;
+  row-gap: 20px;
+}
+
+:is(.genre-list, .search-modal):is(.movie-card, .card-banner) {
+  width: 100%;
+}
+
+/* ================================ */
+
+/*            Search model  */
+
+.search-modal {
+  position: fixed;
+  top: 96px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--surface);
+  padding: 50px 24px;
+  z-index: 4;
+  overflow-y: overlay;
+  display: block;
+}
+
+.search-modal .label {
+  color: var(--primary-variant);
+  font-weight: var(--weight-bold);
+  margin-block-end: 8px;
+}
+.search-modal h1 {
+  font-size: 40px;
+}
+.movie-card h4 {
+  color: white;
+}
+
+.movie-card span {
+  color: var(--white);
+}
+
+.search-modal.active {
+  display: block;
 }
